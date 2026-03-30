@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eye Hospital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
       (function(){
         function getParams(){
@@ -29,139 +30,202 @@
         };
       })();
     </script>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f5f5f5;
-            color: #333;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        header {
-            background: linear-gradient(135deg, #0066cc 0%, #004499 100%);
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        h1 {
-            font-size: 3em;
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
-        .subtitle {
-            font-size: 1.2em;
-            opacity: 0.9;
-        }
-        main {
-            padding: 60px 20px;
-        }
-        .info-section {
-            background: white;
-            padding: 40px;
-            margin: 40px 0;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .info-section h2 {
-            color: #0066cc;
-            margin-bottom: 20px;
-            font-size: 1.8em;
-        }
-        .info-item {
-            margin: 15px 0;
-            font-size: 1.1em;
-            line-height: 1.6;
-        }
-        .label {
-            font-weight: bold;
-            color: #0066cc;
-            display: inline-block;
-            min-width: 120px;
-        }
-        .value {
-            color: #555;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 30px;
-            margin-top: 60px;
-        }
-        .params-display {
-            background: #f0f0f0;
-            padding: 20px;
-            border-left: 4px solid #0066cc;
-            margin-top: 20px;
-            font-family: monospace;
-        }
-    </style>
 </head>
-<body>
-    <header>
-        <div class="container">
-            <h1 id="hospitalName">Eye Hospital</h1>
-            <div class="subtitle" id="hospitalLocation">Welcome to our service</div>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+      <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+        <div class="flex items-center gap-2 text-2xl font-bold text-blue-600">
+          <span>👁️</span>
+          <span id="businessName">Eye Hospital</span>
         </div>
-    </header>
-    
-    <main>
-        <div class="container">
-            <div class="info-section">
-                <h2>Business Information</h2>
-                <div class="info-item">
-                    <span class="label">Name:</span>
-                    <span class="value" id="displayName">-</span>
-                </div>
-                <div class="info-item">
-                    <span class="label">Location:</span>
-                    <span class="value" id="displayLocation">-</span>
-                </div>
-                <div class="info-item">
-                    <span class="label">Phone:</span>
-                    <span class="value" id="displayPhone">-</span>
-                </div>
-                
-                <div class="params-display">
-                    <strong>Injected Parameters:</strong><br>
-                    Name: <span id="paramName">Not set</span><br>
-                    Location: <span id="paramLocation">Not set</span><br>
-                    Phone: <span id="paramPhone">Not set</span>
-                </div>
+        <div class="hidden md:flex gap-8 text-sm text-gray-700">
+          <div class="flex items-center gap-1">📞 (555) 123-4567</div>
+          <div class="flex items-center gap-1">📍 123 Eye Street, NYC</div>
+          <div class="flex items-center gap-1">🕐 Mon-Fri: 9AM-6PM</div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-24">
+      <div class="max-w-6xl mx-auto px-4">
+        <h1 class="text-5xl font-bold mb-4">Premium Eye Care Services</h1>
+        <p class="text-xl mb-8 opacity-90">Advanced vision solutions for a clearer tomorrow</p>
+        <div class="flex gap-4 mb-12">
+          <button class="bg-white text-blue-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition">
+            📅 Schedule Appointment
+          </button>
+          <button class="border-2 border-white px-8 py-3 rounded-lg font-bold hover:bg-blue-700 transition">
+            Learn More
+          </button>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-blue-700 bg-opacity-50 p-6 rounded-lg">
+            <span class="text-4xl block mb-2">🔍</span>
+            <h3 class="font-bold mb-2">Comprehensive Exams</h3>
+            <p class="text-sm opacity-90">Full vision assessment and eye health screening</p>
+          </div>
+          <div class="bg-blue-700 bg-opacity-50 p-6 rounded-lg">
+            <span class="text-4xl block mb-2">👓</span>
+            <h3 class="font-bold mb-2">Eyewear Fitting</h3>
+            <p class="text-sm opacity-90">Expert glasses & contact lens fitting services</p>
+          </div>
+          <div class="bg-blue-700 bg-opacity-50 p-6 rounded-lg">
+            <span class="text-4xl block mb-2">⚕️</span>
+            <h3 class="font-bold mb-2">Treatment Plans</h3>
+            <p class="text-sm opacity-90">Personalized care for eye conditions & diseases</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-12">Our Services</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-gray-50 p-8 rounded-lg shadow hover:shadow-lg transition">
+            <span class="text-3xl mb-4 block">🎯</span>
+            <h3 class="text-xl font-bold mb-3">Refractive Surgery</h3>
+            <p class="text-gray-600">LASIK and other advanced eye surgeries</p>
+          </div>
+          <div class="bg-gray-50 p-8 rounded-lg shadow hover:shadow-lg transition">
+            <span class="text-3xl mb-4 block">👶</span>
+            <h3 class="text-xl font-bold mb-3">Pediatric Eye Care</h3>
+            <p class="text-gray-600">Specialized care for children's vision</p>
+          </div>
+          <div class="bg-gray-50 p-8 rounded-lg shadow hover:shadow-lg transition">
+            <span class="text-3xl mb-4 block">🔬</span>
+            <h3 class="text-xl font-bold mb-3">Advanced Diagnostics</h3>
+            <p class="text-gray-600">Latest imaging and testing technology</p>
+          </div>
+          <div class="bg-gray-50 p-8 rounded-lg shadow hover:shadow-lg transition">
+            <span class="text-3xl mb-4 block">💊</span>
+            <h3 class="text-xl font-bold mb-3">Medical Treatment</h3>
+            <p class="text-gray-600">Management of eye diseases & conditions</p>
+          </div>
+          <div class="bg-gray-50 p-8 rounded-lg shadow hover:shadow-lg transition">
+            <span class="text-3xl mb-4 block">🕶️</span>
+            <h3  class="text-xl font-bold mb-3">Optical Shop</h3>
+            <p class="text-gray-600">Full range of quality eyewear</p>
+          </div>
+          <div class="bg-gray-50 p-8 rounded-lg shadow hover:shadow-lg transition">
+            <span class="text-3xl mb-4 block">🏥</span>
+            <h3 class="text-xl font-bold mb-3">Emergency Care</h3>
+            <p class="text-gray-600">24/7 emergency eye care services</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-20 bg-blue-50">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-12">Why Choose <span id="aboutName">Eye Hospital</span>?</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="space-y-4">
+            <div class="flex gap-3">
+              <span class="text-2xl">✅</span>
+              <div>
+                <h3 class="font-bold text-lg">Expert Ophthalmologists</h3>
+                <p class="text-gray-600">Board-certified specialists with years of experience</p>
+              </div>
             </div>
+            <div class="flex gap-3">
+              <span class="text-2xl">✅</span>
+              <div>
+                <h3 class="font-bold text-lg">Modern Technology</h3>
+                <p class="text-gray-600">State-of-the-art equipment and facilities</p>
+              </div>
+            </div>
+            <div class="flex gap-3">
+              <span class="text-2xl">✅</span>
+              <div>
+                <h3 class="font-bold text-lg">Patient-Centered Care</h3>
+                <p class="text-gray-600">Personalized treatment plans for each patient</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white p-8 rounded-lg shadow">
+            <div class="space-y-4">
+              <div class="border-b pb-3">
+                <p class="font-bold">📍 Location</p>
+                <p id="location" class="text-gray-600">123 Eye Street, NYC</p>
+              </div>
+              <div class="border-b pb-3">
+                <p class="font-bold">📞 Contact</p>
+                <p id="phone" class="text-gray-600">(555) 123-4567</p>
+              </div>
+              <div>
+                <p class="font-bold">🕐 Hours</p>
+                <p class="text-gray-600">Mon-Fri: 9AM-6PM<br>Sat: 10AM-4PM<br>Sun: Closed</p>
+              </div>
+            </div>
+          </div>
         </div>
-    </main>
-    
-    <footer>
-        <p>&copy; 2024. All rights reserved.</p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+          <div>
+            <h3 class="font-bold mb-4">Services</h3>
+            <ul class="space-y-2 text-sm text-gray-400">
+              <li>✓ Eye Exams</li>
+              <li>✓ Eyewear</li>
+              <li>✓ Surgery</li>
+              <li>✓ Emergency Care</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-bold mb-4">Company</h3>
+            <ul class="space-y-2 text-sm text-gray-400">
+              <li>About Us</li>
+              <li>Our Team</li>
+              <li>Careers</li>
+              <li>Contact</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-bold mb-4">Connect</h3>
+            <ul class="space-y-2 text-sm text-gray-400">
+              <li>👍 Facebook</li>
+              <li>🐦 Twitter</li>
+              <li>📷 Instagram</li>
+              <li>💼 LinkedIn</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-bold mb-4">Contact Info</h3>
+            <p class="text-sm text-gray-400">📍 123 Eye Street, NYC</p>
+            <p class="text-sm text-gray-400">📞 (555) 123-4567</p>
+            <p class="text-sm text-gray-400">✉️ info@eyehospital.com</p>
+          </div>
+        </div>
+        <div class="border-t border-gray-800 pt-8">
+          <p class="text-center text-gray-400 text-sm">© 2024 Eye Hospital. All rights reserved. | Privacy Policy | Terms of Service</p>
+        </div>
+      </div>
     </footer>
-    
+
     <script>
-        function updatePageWithParams(){
-            const params = window.__dynamicParams || {};
-            const businessName = params.businessName || 'Eye Hospital';
-            document.getElementById('hospitalName').textContent = businessName;
-            document.getElementById('hospitalLocation').textContent = `Welcome to ${businessName}`;
-            const location = params.cityLocation || 'Your Location';
-            const phone = params.phone || 'Contact us for more info';
-            document.getElementById('displayName').textContent = businessName;
-            document.getElementById('displayLocation').textContent = location;
-            document.getElementById('displayPhone').textContent = phone;
-            document.getElementById('paramName').textContent = businessName;
-            document.getElementById('paramLocation').textContent = location;
-            document.getElementById('paramPhone').textContent = phone;
+      // Update page with injected parameters
+      document.addEventListener('DOMContentLoaded', function() {
+        const params = window.__dynamicParams || {};
+        if (params.businessName) {
+          document.getElementById('businessName').textContent = params.businessName;
+          document.getElementById('aboutName').textContent = params.businessName;
         }
-        updatePageWithParams();
-        setTimeout(updatePageWithParams, 100);
+        if (params.cityLocation) {
+          document.getElementById('location').textContent = params.cityLocation;
+        }
+        if (params.phone) {
+          document.getElementById('phone').textContent = params.phone;
+        }
+      });
     </script>
 </body>
 </html>
